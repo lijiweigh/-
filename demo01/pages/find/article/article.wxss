@@ -1,0 +1,35 @@
+.title {
+    font-size: 50rpx;
+    font-weight: bold;
+    text-align: center;
+}
+
+.msg {
+    display: flex;
+    margin-top: 30rpx;
+    color: #ccc;
+    justify-content: space-around;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 750rpx;
+    height: 750rpx;
+}
+
+.imgItem {
+    width: 80%;
+    height: 80%;
+}
+
+.content {
+    padding: 0 50rpx;
+    margin-bottom: 50rpx;
+}
+
+.p {
+    color: #666;
+    text-indent: 2em;
+}

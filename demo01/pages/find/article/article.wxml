@@ -1,0 +1,17 @@
+<view>
+    <view class='title'>{{title}}</view>
+    <view class='msg'>
+        <view class='author'>赛义只能</view>
+        <view class='date'>2018-09-21</view>
+    </view>
+
+    <view class='img'>
+        <image class='imgItem' src='{{url}}'></image>
+    </view>
+
+    <view class='content'>
+        <view class='p'>
+            友邻邦APP是一款基于移动互联网、物联网技术开发的智慧社区手机客户端。小区业主可通过APP随时随地实现远程门禁开锁，可视对讲，视频监视、访客授权等功能，同时还具有物业信息接收、咨询投诉、报事报修等物业服务功能。专为小区住户量身定做，乐享智慧生活！
+        </view>
+    </view>
+</view>

@@ -50,17 +50,6 @@ App({
   /**
    * 当小程序启动，或从后台进入前台显示，会触发 onShow
    */
-  onShow: function (options) {
-      function isMiniProgram() {
-          return window.__wxjs_environment === 'miniprogram'
-      }
-      if (!window.WeixinJSBridge || !WeixinJSBridge.invoke) {
-          document.addEventListener('WeixinJSBridgeReady', ready, false)
-      } else {
-          isMiniProgram()
-      }
-
-  },
 
   /**
    * 当小程序从前台进入后台，会触发 onHide

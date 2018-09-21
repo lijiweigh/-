@@ -6,7 +6,8 @@
     "pages/more/login/login",
     "pages/home/home",
     "pages/find/find",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/find/article/article"
   ],
   "window":{
     "backgroundTextStyle":"light",

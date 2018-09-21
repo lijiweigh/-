@@ -1,11 +1,11 @@
 <view>
     <view class="swiper">
         <swiper indicator-dots='true' indicator-color='#Ccc' indicator-active-color='red'>
-            <block class="swiper-item" wx:for="{{imgUrls}}" wx:key="index">
+            <navigator url='./article/article?url={{item}}' class="swiper-item" wx:for="{{imgUrls}}" wx:key="index" >
                 <swiper-item>
                     <image src='{{item}}'></image>
                 </swiper-item>
-            </block>
+            </navigator>
         </swiper>
     </view>
 
@@ -16,6 +16,8 @@
             </view>
         </view>
 
-        <com-list wx:for="{{articleList[curTab]}}" obj="{{item}}" wx:key="{{index}}"></com-list>
+       <navigator url='./article/article?url={{item.img}}&title={{item.title}}' wx:for="{{articleList[curTab]}}" wx:key="{{index}}">
+             <com-list obj="{{item}}" ></com-list>
+       </navigator>
     </view>
 </view>
