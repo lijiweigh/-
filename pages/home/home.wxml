@@ -1,0 +1,58 @@
+<view>
+    <view class="swiper">
+        <swiper indicator-dots='true' indicator-color='#ccc' indicator-active-color='red'>
+            <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+                <swiper-item>
+                    <image src='{{item}}'></image>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+    <view class='navList'>
+        <navigator class='navItem' wx:for="{{8}}" wx:key="{{index}}">
+            <image class='navItem-img' src='../../assets/icons/nav-wuyetousu.png'></image>
+            <text class='navItem-text'>物业投诉</text>
+        </navigator>
+    </view>
+
+    <view class='menjin'>
+        <view class='menjin-bar'>
+            <text>门禁</text>
+            <navigator class='menjin-nav'>更多》</navigator>
+        </view>
+        <view class='menjin-items'>
+            <navigator class="menjin-item" wx:for="{{menjinList}}" wx:key="{{index}}">
+                <image class='menjin-img' src='../../assets/icons/lockItem.png'></image>
+                <text class='menjin-text'>{{item}}</text>
+            </navigator>
+        </view>
+    </view>
+
+    <view class='contentList'>
+        <view class='contentList-bar'>
+            <text>推荐</text>
+            <navigator class='contentList-nav'>更多》</navigator>
+        </view>
+        <view class='contentList-content'>
+            <view class='contentList-item' wx:for="{{articleList}}" wx:key="{{index}}">
+                <view class='contentList-img'>
+                    <image class='contentList-img-img' src='{{item.img}}'></image>
+                </view>
+                <view class='contentList-block'>
+                    <view>
+                        <text class='contentList-title'>{{item.title}}</text>
+                    </view>
+                    <view>
+                        <text class='contentList-tips'>{{item.title}}</text>
+                    </view>
+                    <view>
+                        <text class='contentList-time'>{{item.time}}</text>
+                    </view>
+                    
+                    
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

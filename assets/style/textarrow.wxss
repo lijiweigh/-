@@ -1,0 +1,22 @@
+.m-box{
+  background: #fff;
+  margin: 10px;
+}
+.m-box .item{
+  height: 60px;
+  line-height: 60px;
+  text-indent:20px;
+  position:relative;
+}
+.m-box .label{
+  color: #333;
+  font-size: 18px;
+}
+.m-box .arrow{
+  width:9px;
+  height:13px;
+  right:15px;
+  position:absolute;
+  top:50%;
+  margin-top:-7px;
+}

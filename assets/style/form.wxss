@@ -1,0 +1,83 @@
+/* form */
+.m-form>view{
+  padding: 0 15px;
+}
+.m-form .rowF{
+  background: #fff;
+  height:48px;
+  font-size:20px;
+  position: relative;
+}
+.m-form .rowF>input{
+  height: 47px;
+  line-height: 47px;
+  padding: 0 1.5em 0 2.5em;
+}
+.m-form .icon{
+  width:30px;
+  height:30px;
+  position:absolute;
+  top:9px;
+}
+.m-form .icon.right{
+  right: 20px;
+}
+
+.header{
+  color: #d1d1d1;
+  height: 48px;
+  line-height: 48px;
+  font-size: 16px;
+  padding-left: 15px;
+}
+.btnBox{
+  margin: 36px 0 15px 0;
+}
+.infoBox>checkbox{
+  width: 20px;
+  height: 20px;
+}
+.infoBox{
+  color: #9E9E9E;
+  font-size: 16px;
+  overflow:hidden;
+  height:30px;
+}
+.infoBox>navigator{
+  margin:2px 0 0 30px;
+}
+
+.m-code{
+  overflow: hidden;
+}
+.m-code>input{
+  width:120px;
+float:left;
+border-right:1px solid #d1d1d1;
+
+}
+.m-code>.btn{
+  height:47px;
+  line-height:47px;
+  color:#999;
+  font-size:18px;
+}
+.m-code>.btn .time{
+  padding:0 10px;
+  height:47px;
+  display:inline-block;
+  width:35px;
+  text-align:center;
+
+}
+.m-code>.btn .chongfabtn{
+  height:30px;
+  display:inline-block;
+  padding:0 10px;
+  color:#666;
+  margin:9px;
+  border-radius:10px;
+  line-height:30px;
+  border:1px solid #d1d1d1;
+
+}

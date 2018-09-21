@@ -1,0 +1,12 @@
+<view>
+    <view class='com-list'>
+        <view class='imgWrap'>
+            <image class='img' src='{{obj.img}}'></image>
+        </view>
+        <view class='content'>
+            <view class='title'>{{obj.title}}</view>
+            <view class='text'>{{obj.title}}</view>
+            <view class='time'>{{obj.time}}</view>
+        </view>
+    </view>
+</view>

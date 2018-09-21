@@ -1,0 +1,112 @@
+.navList {
+    display: flex;
+    flex-flow: wrap;
+    margin-top: 30rpx;
+}
+
+.navItem {
+    width: 150rpx;
+    height: 150rpx;
+    margin: 18.75rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.navItem-img {
+    width: 80%;
+    height: 80%;
+}
+
+.navItem-text {
+    color: #ccc;
+    font-size: 12px;
+    margin-top: 20rpx;
+}
+
+.menjin-bar,
+.contentList-bar {
+    background-color: #ccc;
+    color: #666;
+    line-height: 30px;
+}
+
+.menjin-nav,
+.contentList-nav {
+    float: right;
+}
+
+.menjin-items {
+    display: flex;
+
+}
+
+.menjin-item {
+    flex: 1;
+    width: 250rpx;
+    height: 250rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20rpx;
+}
+
+.menjin-img {
+    width: 180rpx;
+    height: 180rpx;
+    margin-bottom: 20rpx;
+    
+}
+
+.menjin-text {
+    color: #ccc;
+}
+
+.contentList-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.contentList-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250rpx;
+    width: 250rpx;
+}
+
+.contentList-img-img {
+    width: 70%;
+    height: 70%;
+
+}
+
+.contentList-block {
+    width: 500rpx;
+}
+
+.contentList-block view {
+    width: 450rpx;
+}
+
+
+.contentList-tips,
+.contentList-time {
+    color: #ccc;
+    font-size: 12px;
+}
+
+.contentList-title,
+.contentList-tips,
+.contentList-time {
+    display: inline-block;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

@@ -1,0 +1,80 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150rpx;
+    margin-bottom: 50rpx;
+}
+
+.logoImg {
+    width: 250rpx;
+    height: 250rpx;
+    
+}
+
+.input {
+    box-sizing: border-box;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 0 30rpx;
+    
+}
+
+.username,
+.password {
+    position: relative;
+    
+}
+
+.username {
+    border-bottom: 1px solid #ccc;
+}
+
+.userinput,
+.passinput {
+    height: 150rpx;
+    margin-left: 100rpx;
+}
+
+.userimg,
+.passimg {
+    position: absolute;
+    left: 10rpx;
+    top: 35rpx;
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.btn,
+.more {
+    width: 100%;
+    margin-bottom: 50rpx;
+}
+
+.btnlogin {
+    width: 80%;
+    margin-top: 50rpx;
+}
+
+.fl,
+.fr {
+    color: skyblue;
+    font-size: 12px;
+}
+
+.fl {
+    float: left;
+    margin-left: 50rpx;
+}
+
+.fr {
+    float: right;
+    margin-right: 50rpx;
+}

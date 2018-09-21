@@ -1,0 +1,28 @@
+<!-- index.wxml
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+
+<view>
+    <view hidden="{{!isFirstLoad}}">
+        <image class="fullFill" src="/assets/imgs/firstLoad.png"></image>
+    </view>
+
+    <view hidden="{{isFirstLoad}}">
+        <image class="fullFill" src="/assets/imgs/loginBg.png"></image>
+        <image class='logo abs' src='/assets/imgs/logo.png'></image>
+        <navigator url='../othercase/othercase' class='btn abs'>小程序其它案例</navigator>
+        <navigator url="../more/login/login" class='btn abs login'>手机号登录</navigator>
+        <navigator class='btn abs register'>注册</navigator>
+        <navigator class='btn abs back'>欢迎回来</navigator>
+    </view>
+</view>

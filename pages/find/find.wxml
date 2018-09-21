@@ -1,0 +1,21 @@
+<view>
+    <view class="swiper">
+        <swiper indicator-dots='true' indicator-color='#Ccc' indicator-active-color='red'>
+            <block class="swiper-item" wx:for="{{imgUrls}}" wx:key="index">
+                <swiper-item>
+                    <image src='{{item}}'></image>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+    <view class='content'>
+        <view class='tab'>
+            <view wx:for="{{tabList}}" wx:key="index" class="tabItem {{curTab===index?'cur':''}}" data-index="{{index}}" bindtap='toggleTab'>
+                {{item}}
+            </view>
+        </view>
+
+        <com-list wx:for="{{articleList[curTab]}}" obj="{{item}}" wx:key="{{index}}"></com-list>
+    </view>
+</view>

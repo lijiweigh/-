@@ -1,0 +1,33 @@
+.tab {
+    height: 100rpx;
+    background-color: #eee;
+    color: #ccc;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tabItem {
+    
+    display: block;
+    height:100rpx;
+    line-height: 100rpx;
+    margin: 20rpx;
+
+}
+
+.cur {
+    position: relative;
+}
+
+.cur::after {
+    content: "";
+    /* display: inline-block; */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5rpx;
+    background: red;
+
+}

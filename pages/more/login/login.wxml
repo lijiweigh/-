@@ -1,0 +1,22 @@
+<view class="login">
+    <view class="logo">
+        <image class="logoImg" src="../../../assets/imgs/logo.png"></image>
+    </view>
+    <view class="input">
+        <view class="username">
+            <image class="userimg" src="../../../assets/icons/phone.png"></image>
+            <input class="userinput" type="text" placeholder="账号"></input>
+        </view>
+        <view class="password">
+            <image class="passimg" src="../../../assets/icons/password.png"></image>
+            <input class="passinput" type="password" placeholder="密码"></input>
+        </view>
+    </view>
+    <view class="btn">
+        <button class='btnlogin' type="warn" bindtap="doLogin">登陆</button>
+    </view>
+    <view class="more">
+        <navigator class="fl">忘记密码？</navigator>
+        <navigator class="fr">新用户注册</navigator>
+    </view>
+</view>

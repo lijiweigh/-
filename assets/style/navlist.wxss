@@ -1,0 +1,22 @@
+/* navList更多服务列表 */
+.navList{
+  height: 200px;
+  width: 100%;
+  background: #fff;
+}
+.navList .item{
+  text-align: center;
+  width: 25%;
+  float: left;
+  height: 100px;
+}
+.navList .item image{
+  width: 33px;
+  height: 33px;
+  display: block;
+  margin: 20px auto 10px;
+}
+.navList .item text{
+  color:#A4A4A4;
+  font-size: 14px;
+}

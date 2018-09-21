@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "com-list": "/pages/components/com-list/com-list"
+    }
+}

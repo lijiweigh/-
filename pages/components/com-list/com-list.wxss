@@ -1,0 +1,51 @@
+.com-list {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.imgWrap {
+    width: 250rpx;
+    height: 250rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img {
+    width: 70%;
+    height: 70%;
+}
+
+.content {
+    width: 500rpx;
+    height: 250rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.title,
+.text,
+.time {
+    width: 90%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 22px;
+}
+
+.title {
+    font-size: 16px;
+    color: #666;
+}
+
+.text {
+    font-size: 14px;
+    color: #999;
+}
+
+.time {
+    font-size: 16px;
+    color: #999;
+}
