@@ -1,0 +1,10 @@
+<view class="recommendMusicList" bindtap='tap'>
+    <image class='img' src='{{ MusicListItem.picUrl }}'></image>
+    <view class='title'>{{ MusicListItem.name }}</view>
+    <view class='icon'>
+        <view class='iconfont icon-ttpod playCount_icon'></view>
+        <view class='playCount'>
+            {{playCount}}
+        </view>
+    </view>
+</view>

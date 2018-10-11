@@ -1,0 +1,8 @@
+<template name="playingGif">
+    <view class="playingGif {{ isPlaying ? 'playing' : '' }}">
+        <view class='gifItem g1'></view>
+        <view class='gifItem g2'></view>
+        <view class='gifItem g3'></view>
+        <view class='gifItem g4'></view>
+    </view>
+</template>

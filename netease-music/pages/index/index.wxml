@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<import src="../template/template.wxml" />
+
+<view>
+    <view class='top'>
+        <view class='search-wrap'>
+            <view class='search' bindtap='handleSearch'>
+                <view class='iconfont icon-sousuo'></view>
+                <view class='search-content'>很好听哦！</view>
+            </view>
+            <template is="playingGif" data="{{isPlaying}}" />
+        </view>
+
+        <view class='swiper-wrap'>
+            <swiper class='swiper' indicator-dots='true' indicator-active-color='#Fff' autoplay='true' circular='true' interval='2000'>
+                <block wx:for="{{ bannerList }}" wx:key="{{index}}">
+                    <swiper-item class="swiper-item">
+                        <image src='{{item.picUrl}}'></image>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+    </view>
+
+    <view class='icon-nav'>
+        <view class='nav-item' wx:for="{{ iconNav }}" wx:key="{{ index }}">
+            <view class='icon {{ item.icon }}'></view>
+            <view class='text'>{{item.name}}</view>
+        </view>
+    </view>
+
+    <view class='recommendList'>
+        <view class='title'>推荐歌单</view>
+        <view>
+            <recommendMusicList wx:for="{{MusicList}}" wx:key="{{index}}" bindListTap="handleMusicListTap" MusicListItem="{{ item }}"></recommendMusicList>
+        </view>
+    </view>
+</view>
