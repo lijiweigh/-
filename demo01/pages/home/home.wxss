@@ -1,3 +1,7 @@
+.swiperImg {
+    width: 100%;
+}
+
 .navList {
     display: flex;
     flex-flow: wrap;
@@ -109,4 +113,87 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+
+.mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5)
+}
+
+.maskBox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* margin-left: -300rpx;
+    margin-top: -375rpx; */
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 500rpx;
+    height: 650rpx;
+    padding: 50rpx;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.maskBox .title {
+    
+    font-size: 14px;
+    color: #ccc;
+}
+
+.maskBox .item {
+    color: red;
+    
+    
+}
+
+.maskBox .title,
+.maskBox .item {
+    width: 100%;
+    padding: 30rpx 0;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.slide-wrap {
+    position: relative;
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 100%;
+    margin-top: 50rpx;
+    border: 1px solid orange;
+    
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+    background-color: orange;
+}
+
+.slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150rpx;
+    height: 100%;
+    background-color: #fff;
+}
+
+.slide::after {
+    content: "";
+    border: 20rpx solid orange;
+    position: absolute;
+    left: 65rpx;
+    top: 30rpx;
+    border-color: transparent transparent transparent orange;
+}
+
+.maskBox .btn {
+    width: 100%;
+    margin-top: 50rpx;
 }

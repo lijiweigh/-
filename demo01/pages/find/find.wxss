@@ -1,3 +1,7 @@
+.swiperImg {
+    width: 100%;
+}
+
 .tab {
     height: 100rpx;
     background-color: #eee;

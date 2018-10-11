@@ -3,7 +3,7 @@
         <swiper indicator-dots='true' indicator-color='#Ccc' indicator-active-color='red'>
             <navigator url='./article/article?url={{item}}' class="swiper-item" wx:for="{{imgUrls}}" wx:key="index" >
                 <swiper-item>
-                    <image src='{{item}}'></image>
+                    <image class='swiperImg' src='{{item}}'></image>
                 </swiper-item>
             </navigator>
         </swiper>
