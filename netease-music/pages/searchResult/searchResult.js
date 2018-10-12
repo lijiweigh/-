@@ -56,7 +56,8 @@ Page({
     handleNav (e) {
         this.setData({
             curNav: e.target.dataset.index,
-            searchType: e.target.dataset.searchtype
+            searchType: e.target.dataset.searchtype,
+            isShowNoMore: false
         })
 
         if ( !this.data.searchResult[this.data.curNav].length ) {
@@ -125,8 +126,10 @@ Page({
     handleSearchHot (e) {
         this.setData({
             keywords: e.target.dataset.value,
-            searchValue: e.target.dataset.value
+            searchValue: e.target.dataset.value,
+            isShowClearIcon: true
         })
+       
         this.handleSearchResult(e.target.dataset.value)
     },
 
@@ -218,12 +221,14 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-      console.log("bottom")
-      const _this = this
-      this.setData({
-          ["navList[" + _this.data.curNav + "].offset"]: ++_this.data.navList[_this.data.curNav].offset
-      })
-      this.handleSearchResult(this.data.keywords)
+      
+      if (!this.data.isShowNoMore ) {
+          const _this = this
+          this.setData({
+              ["navList[" + _this.data.curNav + "].offset"]: ++_this.data.navList[_this.data.curNav].offset
+          })
+          this.handleSearchResult(this.data.keywords)
+      }
   },
 
   /**

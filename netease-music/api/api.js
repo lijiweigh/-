@@ -1,4 +1,5 @@
 const baseUrl = "http://localhost:3000"
+// const baseUrl = "http://10.0.108.38:3000"
 
 const wxRequest = (params, url) => {
     wx.showToast({
