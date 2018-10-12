@@ -20,7 +20,6 @@ Component({
         } else if (playCount > 10000) {
             playCount = (playCount / 10000).toFixed(2) + "万"
         }
-        console.log(this)
         this.setData({
             playCount: playCount
         })

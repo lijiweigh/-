@@ -71,7 +71,6 @@ Page({
 
       getRecommendMusicList ({
           success(res) {
-              console.log(res)
               _this.setData({
                   MusicList: res.data.result
               })
