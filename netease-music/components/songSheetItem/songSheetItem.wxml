@@ -1,0 +1,9 @@
+<!--components/songSheetItem/songSheetItem.wxml-->
+<view class='songSheetItem' catchtap='handletap'>
+    <view class='number'> {{ index }} </view>
+    <view class='detail'>
+        <view class='title'> {{ songDetail.name }} </view>
+        <view class='more'> {{ songDetail.al.name }} </view>
+        <view class='playIcon iconfont icon-bofang1'></view>
+    </view>
+</view>

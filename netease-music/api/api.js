@@ -14,13 +14,12 @@ const wxRequest = (params, url) => {
         header: params.header || { 'Content-Type': 'application/json'},
         success (res) {
             params.success && params.success (res)
-            wx.hideToast()
-
         },
         fail (res) {
             params.fail && params.fail (res)
         },
         complete (res) {
+            wx.hideToast()
             params.complete && params.complete (res)
         }
     })
@@ -42,7 +41,9 @@ const getRecommendMV = (params) => {
 const getMusicListDetail = (params) => {
     wxRequest(params, baseUrl + "/playlist/detail")
 }
-// 获取精品歌单列表  /top/playlist/highquality?limit=30
+// 获取精品歌单列表  /top/playlist/highquality?limit=30&before=xxx&cat=xxx
+// before: 分页参数,取上一页最后一个歌单的 updateTime 获取下一页数据
+// cat: tag, 比如 " 华语 "、" 古风 " 、" 欧美 "、" 流行 ", 默认为 "全部",可从歌单分类接口获取(/playlist/catlist)
 const getHighqualityMusicList = (params) => {
     wxRequest(params, baseUrl + "/top/playlist/highquality")
 }

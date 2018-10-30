@@ -1,8 +1,19 @@
+<wxs src="../../wxs/filter.wxs" module="filter" />
+
 <template name="playingGif">
     <view class="playingGif {{ isPlaying ? 'playing' : '' }}">
         <view class='gifItem g1'></view>
         <view class='gifItem g2'></view>
         <view class='gifItem g3'></view>
         <view class='gifItem g4'></view>
+    </view>
+</template>
+
+<template name="playCount">
+    <view class='playCount_wrap'>
+        <view class='iconfont icon-ttpod playCount_icon'></view>
+        <view class='playCount'>
+            {{ filter.formatePlayCount ( songCount ) }}
+        </view>
     </view>
 </template>

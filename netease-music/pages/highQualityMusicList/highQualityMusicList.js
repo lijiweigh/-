@@ -1,19 +1,43 @@
+import { getHighqualityMusicList } from "../../api/api.js" 
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    musicList: [],
+    more: true,
+    before: ""
   },
+
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+      this.getList ()
   },
 
+    getList () {
+        if (this.data.more) {
+            const _this = this
+            getHighqualityMusicList({
+                data: {
+                    limit: 10,
+                    before: _this.data.before
+                },
+                success(res) {
+                    _this.setData({
+                        musicList: res.data.playlists,
+                        more: res.data.more,
+                        before: res.data.lasttime
+                    })
+                }
+            }) 
+        }
+    },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
