@@ -1,10 +1,10 @@
-// components/highQualityMusicItem/highQualityMusicItem.js
+// components/recommendMVItem/recommendMVItem.js
 Component({
     /**
      * 组件的属性列表
      */
     properties: {
-        musicItem: {
+        MVItem: {
             type: Object
         }
     },
@@ -13,21 +13,20 @@ Component({
      * 组件的初始数据
      */
     data: {
-        songCount: 0
+        videoCount: 0
     },
 
     /**
      * 组件的方法列表
      */
     methods: {
-        handleTap () {
-            this.triggerEvent("itemTap")
+        tap () {
+            this.triggerEvent("MVTap")
         }
     },
     attached () {
         this.setData({
-            songCount: this.data.musicItem.playCount
+            videoCount: this.data.MVItem.playCount
         })
     }
-    
 })

@@ -41,7 +41,7 @@
 				{
 					"id": 0,
 					"name": "searchResult",
-					"pathName": "pages/highQualityMusicList/highQualityMusicList",
+					"pathName": "pages/topArtists/topArtists",
 					"query": ""
 				}
 			]

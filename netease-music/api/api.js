@@ -34,8 +34,10 @@ const getRecommendMusicList = (params) => {
     wxRequest(params, baseUrl + "/personalized")
 }
 // 推荐MV  
+// 可选参数 : limit: 取出数量 , 默认为 30
+// offset: 偏移数量, 用于分页, 如 : (页数 - 1) * 30, 其中 30 为 limit 的值, 默认 为 0
 const getRecommendMV = (params) => {
-    wxRequest(params, baseUrl + "/personalized/mv")
+    wxRequest(params, baseUrl + "/top/mv")
 }
 // 获取歌单列表  调用例子 : /playlist/detail?id=24381616
 const getMusicListDetail = (params) => {

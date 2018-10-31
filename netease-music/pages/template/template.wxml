@@ -17,3 +17,14 @@
         </view>
     </view>
 </template>
+
+<template name="videoPlayCount">
+    <view class='videoPlayCount_wrap'>
+        <view class='iconfont icon-shipin4 videoPlayCount_icon'></view>
+        <view class='videoPlayCount'>
+            {{ filter.formatePlayCount ( videoCount ) }}
+            <!-- {{videoCount}} -->
+        </view>
+        
+    </view>
+</template>

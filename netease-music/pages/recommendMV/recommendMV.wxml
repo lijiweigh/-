@@ -1,3 +1,3 @@
-<view>
-recommendMV
+<view class='recommendMV'>
+    <recommendMVItem wx:for="{{ MVList }}" wx:key="{{ index }}" MVItem="{{ item }}" bindMVTap="handleMVTap"></recommendMVItem>
 </view>

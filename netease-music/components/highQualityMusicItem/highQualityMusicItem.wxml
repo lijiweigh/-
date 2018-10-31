@@ -1,4 +1,16 @@
-<!--components/highQualityMusicItem/highQualityMusicItem.wxml-->
-<view class='highQualityMusicItem'>
-    {{ musicItem.description }}
+<import src="../../pages/template/template.wxml" />
+
+<view class='highQualityMusicItem' catchtap='handleTap'>
+    <view class='post'>
+        <image class='post_img' src='{{ musicItem.coverImgUrl }}'></image>
+        <template is="playCount" data="{{songCount}}" />
+    </view>
+    <view class='detail'>
+        <view class='title'>{{ musicItem.name }}</view>
+        <view class='creator'>by {{ musicItem.creator.nickname }}</view>
+        <view class='tagAndCopywriter'>
+            <view class='tag'>{{ musicItem.tag }}</view>
+            <view class='copywriter'>{{ musicItem.copywriter }}</view>
+        </view>
+    </view>
 </view>

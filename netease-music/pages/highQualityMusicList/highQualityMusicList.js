@@ -8,7 +8,8 @@ Page({
   data: {
     musicList: [],
     more: true,
-    before: ""
+    before: "",
+    limit: 10
   },
 
 
@@ -20,20 +21,25 @@ Page({
       this.getList ()
   },
 
+    handleItemTap () {
+        console.log("handleItemTap")
+    },
+
     getList () {
         if (this.data.more) {
             const _this = this
             getHighqualityMusicList({
                 data: {
-                    limit: 10,
+                    limit: _this.data.limit,
                     before: _this.data.before
                 },
                 success(res) {
                     _this.setData({
-                        musicList: res.data.playlists,
+                        musicList: _this.data.musicList.concat( res.data.playlists ),
                         more: res.data.more,
-                        before: res.data.lasttime
+                        before: res.data.playlists[_this.data.limit - 1].updateTime
                     })
+                    console.log(res.data)
                 }
             }) 
         }
@@ -77,7 +83,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+      this.getList()
   },
 
   /**
