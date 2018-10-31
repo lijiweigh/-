@@ -1,0 +1,47 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/highQualityMusicList/highQualityMusicList",
+        "pages/recommendMV/recommendMV",
+        "pages/topArtists/topArtists",
+        "pages/searchResult/searchResult"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#EA584F",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#666",
+        "selectedColor": "#d81e06",
+        "borderStyle": "#999",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "推荐",
+                "iconPath": "images/discover.png",
+                "selectedIconPath": "images/discover_active.png"
+            },
+            {
+                "pagePath": "pages/highQualityMusicList/highQualityMusicList",
+                "text": "歌单",
+                "iconPath": "images/my.png",
+                "selectedIconPath": "images/my_active.png"
+            },
+            {
+                "pagePath": "pages/recommendMV/recommendMV",
+                "text": "MV",
+                "iconPath": "images/video.png",
+                "selectedIconPath": "images/video_active.png"
+            },
+            {
+                "pagePath": "pages/topArtists/topArtists",
+                "text": "歌手",
+                "iconPath": "images/friend.png",
+                "selectedIconPath": "images/friend_active.png"
+            }
+        ]
+    }
+}
