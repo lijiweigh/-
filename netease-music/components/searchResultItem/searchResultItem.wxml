@@ -1,0 +1,55 @@
+<!--components/searchResultItem/searchResultItem.wxml-->
+<view class="searchResultItem {{ searchtype === 100 ? 'inline-block' : '' }}" bindtap='tap'>
+    <view class='songs' wx:if="{{searchtype === 1}}">
+        
+        <view class='songLeft'>
+            <view class='name'>{{ dataObj.name }}</view>
+            <view class='detail'>
+                <text class='singer'>{{dataObj.artists[0].name}}</text>
+                -
+                <text class='album'>{{dataObj.album.name}}</text>
+            </view>
+        </view>
+
+        <view class='songRight iconfont icon-bofang1'></view>
+       
+    </view>
+
+    <view wx:if="{{searchtype === 1000}}">
+        <view class='musicList'>
+            <image class='poster' src='{{ dataObj.coverImgUrl }}'></image>
+            <view class='detail'>
+                <view class='name'>{{ dataObj.name }}</view>
+                <view class='playMsg'>
+                    <text>{{ dataObj.trackCount }}</text>首音乐
+                    by
+                    <text>{{ dataObj.creator.nickname }}</text>,
+                    播放<text>{{ dataObj.playCount }}</text>次
+                </view>
+            </view>
+        </view>
+        
+    </view>
+
+    <view class='singers' wx:if="{{searchtype === 100}}">
+        <image class='avatar' src='{{ dataObj.picUrl }}'></image>
+        <view class='name'>{{ dataObj.name }}</view>
+    </view>
+
+    <view class='videos' wx:if="{{searchtype === 1014}}">
+       <view class='poster'>
+            <image class='img' src='{{ dataObj.coverUrl }}'></image>
+            <view class='playIcon'>
+                <text class='iconfont icon-shipin4 icon'></text>
+                <text class='playCount'>{{ dataObj.playTime }}</text>
+            </view>
+       </view>
+       <view class='detail'>
+            <view class='title'>{{ dataObj.title }}</view>
+            <view class='time'>
+                <text>{{ dataObj.durationms }}</text>，
+                by<text>{{ dataObj.creator[0].userName }}</text>
+            </view>
+       </view>
+    </view>
+</view>

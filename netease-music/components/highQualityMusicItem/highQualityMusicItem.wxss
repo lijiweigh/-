@@ -1,0 +1,64 @@
+@import "../../pages/template/template.wxss";
+
+
+.highQualityMusicItem {
+    display: flex;
+    padding: 10rpx;
+    border-bottom: 1rpx solid #eee;
+}
+
+.post {
+    position: relative;
+    margin-right: 20rpx;
+    font-size: 0;
+}
+
+.post_img {
+    width: 240rpx;
+    height: 240rpx;
+}
+
+.detail {
+    display: flex;
+    height: 240rpx;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30rpx 0;
+}
+
+.title {
+    font-size: 28rpx;
+    font-weight: bold;
+
+}
+
+.creator {
+    font-size: 24rpx;
+    color: #666;
+}
+
+.tagAndCopywriter {
+    color: #666;
+    font-size: 24rpx;
+    line-height: 1.5;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.tag, 
+.copywriter {
+    display: inline;
+    /* vertical-align: middle; */
+}
+
+.tag {
+    display: inline-block;
+    margin-right: 10rpx;
+    color: red;
+    border: 1rpx solid red;
+    padding: 0;
+    line-height: 1;
+    font-size: 20rpx;
+    
+}

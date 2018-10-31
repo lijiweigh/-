@@ -1,1 +1,6 @@
-{}
+{
+    "usingComponents": {
+        "recommendMVItem": "/components/recommendMVItem/recommendMVItem"
+    },
+    "navigationBarTitleText": "推荐MV"
+}

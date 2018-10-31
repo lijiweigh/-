@@ -12,10 +12,10 @@
         </view>
 
         <view class='swiper-wrap'>
-            <swiper class='swiper' indicator-dots='true' indicator-active-color='#Fff' autoplay='true' circular='true' interval='2000'>
+            <swiper class='swiper' indicator-dots='true' indicator-active-color='#Fff' autoplay='true' circular='true' interval='5000'>
                 <block wx:for="{{ bannerList }}" wx:key="{{index}}">
                     <swiper-item class="swiper-item">
-                        <image src='{{item.picUrl}}'></image>
+                        <image src='{{item.picUrl}}' data-id="{{ item.targetId }}"></image>
                     </swiper-item>
                 </block>
             </swiper>
@@ -32,7 +32,7 @@
     <view class='recommendList'>
         <view class='title'>推荐歌单</view>
         <view>
-            <recommendMusicList wx:for="{{MusicList}}" wx:key="{{index}}" bindListTap="handleMusicListTap" MusicListItem="{{ item }}"></recommendMusicList>
+            <recommendMusicList wx:for="{{MusicList}}" wx:key="{{index}}" bindListTap="handleNavigateTo" data-id="{{ item.id }}" MusicListItem="{{ item }}"></recommendMusicList>
         </view>
     </view>
 </view>

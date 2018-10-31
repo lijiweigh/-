@@ -52,8 +52,18 @@ Page({
         })
     },
 
-    handleMusicListTap() {
-        console.log("tap")
+    handleMusicListTap(e) {
+        wx.navigateTo({
+            url: '/pages/songSheetList/songSheetList?id=' + e.target.dataset.id,
+            
+        })
+    },
+    handleNavigateTo (e) {
+        console.log(e.target.dataset.id)
+        wx.navigateTo({
+            url: '/pages/songSheetList/songSheetList?id=' + e.target.dataset.id,
+
+        })
     },
 
   /**
@@ -82,7 +92,17 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-      
+    //   wx.login({
+    //       success (res) {
+    //           console.log(res.code)
+    //       }
+    //   })
+
+    wx.getSystemInfo({
+        success: function(res) {
+            console.log(res.benchmarkLevel)
+        },
+    })
   },
 
   /**

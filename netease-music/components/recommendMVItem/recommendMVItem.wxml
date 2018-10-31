@@ -1,0 +1,16 @@
+<wxs src="../../wxs/filter.wxs" module="filter"/>
+<import src="../../pages/template/template.wxml" />
+
+<view class='recommendMVItem' catchtap='tap'>
+    <view class='poster'>
+        <image class='poster_img' src='{{ MVItem.cover }}'></image>
+        <view class='singerTag'>{{ MVItem.artistName }}</view>
+        <template is="videoPlayCount" data="{{ videoCount }}" />
+        <view class='iconfont icon-bofang'></view>
+    </view>
+
+    <view class='desc'>
+        <view class='name'>{{ MVItem.name }}</view>
+        <view class='briefDesc' wx:if="{{ MVItem.briefDesc }}">{{ MVItem.briefDesc }}</view>
+    </view>
+</view>

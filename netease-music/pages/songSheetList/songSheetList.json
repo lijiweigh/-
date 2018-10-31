@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "play-count": "/components/playCount/playCount",
+        "song-sheet-item": "/components/songSheetItem/songSheetItem"
+    }
+}

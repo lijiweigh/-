@@ -1,0 +1,19 @@
+/* components/playCount/playCount.wxss */
+@import '../../iconfont.wxss';
+.playCount_icon {
+    margin-right: 10rpx;
+}
+
+.playCount_wrap {
+    /* position: absolute;
+    right: 10rpx;
+    top: 10rpx;
+    font-size: 0; */
+}
+
+.playCount,
+.playCount_icon {
+    display: inline-block;
+    /* color: #fff; */
+    font-size: 20rpx;
+}

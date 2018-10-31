@@ -39,9 +39,10 @@
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "searchResult",
-					"pathName": "pages/searchResult/searchResult"
+					"pathName": "pages/topArtists/topArtists",
+					"query": ""
 				}
 			]
 		}
