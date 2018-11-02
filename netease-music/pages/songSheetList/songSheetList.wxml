@@ -26,7 +26,7 @@
 
         <view class='lists'>
             <block wx:for="{{ songList }}" wx:key="{{index}}">
-                <song-sheet-item songDetail="{{ item }}" index="{{ index + 1 }}" bindsongItemTap="handleSongItemTap"></song-sheet-item>
+                <song-sheet-item songDetail="{{ item }}" index="{{ index + 1 }}" bindsongItemTap="handleSongItemTap" data-id="{{ item.id }}"></song-sheet-item>
             </block>
         </view>
     </view>

@@ -38,8 +38,11 @@ Page({
         })
     },
 
-    handleSongItemTap () {
-        console.log("handleSongItemTap")
+    handleSongItemTap (e) {
+        console.log(e.target.dataset.id)
+        wx.navigateTo({
+            url: '/pages/playSong/playSong?id=' + e.target.dataset.id,
+        })
     },
 
     /**

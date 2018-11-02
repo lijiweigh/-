@@ -1,9 +1,9 @@
 <view class="topArtists">
-    <swiper class='swiper' previous-margin='60rpx' next-margin='60rpx'>
+    <swiper class='swiper' previous-margin='60rpx' next-margin='60rpx' bindchange="handleChange">
         <block wx:for="{{ singerList }}" wx:key="{{ index }}">
             <swiper-item class="swiper_item">
                 <view class='inner_move_item'>
-                    <image src='{{ item.img1v1Url }}'></image>
+                    <image class='cover' src='{{ item.img1v1Url }}'></image>
                     <view class='cur_pos'>
                         NO.{{ index + 1 }}
                     </view>

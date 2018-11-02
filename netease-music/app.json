@@ -5,7 +5,8 @@
         "pages/recommendMV/recommendMV",
         "pages/topArtists/topArtists",
         "pages/searchResult/searchResult",
-        "pages/songSheetList/songSheetList"
+        "pages/songSheetList/songSheetList",
+        "pages/playSong/playSong"
     ],
     "window": {
         "backgroundTextStyle": "light",

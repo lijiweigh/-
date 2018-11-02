@@ -19,6 +19,13 @@ Page({
       this.getSingerList()
   },
 
+    handleChange (e) {
+        console.log(e.detail.current)
+        if ( e.detail.current === this.data.singerList.length - 1 ) {
+            this.getSingerList()
+        }
+    },
+
   getSingerList () {
       const _this = this
       const { singerList, limit, offset, more } = this.data

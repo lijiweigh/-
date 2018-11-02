@@ -82,8 +82,15 @@ const getMusicDetail = (params) => {
     wxRequest(params, baseUrl + "/playlist/detail")
 }
 
+// 必选参数 : id : 音乐 id
+// 可选参数: br: 码率, 默认设置了 999000 即最大码率, 如果要 320k 则可设置为 320000, 其他类推
+const getMusicUrl = (params) => {
+    wxRequest(params, baseUrl + "/song/url")
+}
+
 
 module.exports = {
+    getMusicUrl,
     getMusicDetail,
     getHotSearchResult,
     getSearchResult,
