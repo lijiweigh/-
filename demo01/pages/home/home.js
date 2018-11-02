@@ -33,8 +33,89 @@ Page({
               title: '你还是回乡下养猪吧',
               time: '2017-10-10 10:01:01'
           },
-      ]
+      ],
+      maskShow :false,
+      menjinName: '',
+      slideX: 0,
+      slideW: 0,
+      slideWW: 0,
+      canToast: true
   },
+
+    showMask (e) {
+        console.log(e.currentTarget.dataset.menjin )
+        this.setData({
+            maskShow: true,
+            menjinName: e.currentTarget.dataset.menjin 
+        })
+    },
+
+    maskBack() {
+        this.setData({
+            maskShow: false
+        })
+    },
+
+    slideStart(e) {
+        
+        const target = e.changedTouches[0]
+        this.sx = target.clientX
+        // console.log(e.target.getBoundingClientRect().width)
+
+        wx.createSelectorQuery().select(".slide-wrap").boundingClientRect(rect => {
+           
+            this.setData({
+                slideW: rect.width
+            })
+        }).exec()
+
+        wx.createSelectorQuery().select(".slide").boundingClientRect(rect => {
+           
+            this.setData({
+                slideWW: rect.width
+            })
+        }).exec()
+    },
+
+    slideMove(e) {
+        const target = e.changedTouches[0]
+        this.mx = target.clientX
+        let x = this.mx - this.sx
+        console.log(x)
+        if (x < 0) {
+            x = 0
+        } else if (x > this.data.slideW - this.data.slideWW - 2) {
+            x = this.data.slideW - this.data.slideWW - 2
+            if (this.data.canToast) {
+                wx.showToast({
+                    title: '开锁成功！',
+                    duration: 1000,
+                    icon: "success"
+                })
+
+                this.setData({
+                    canToast: false
+                })
+
+                setTimeout(() => {
+                    this.setData({
+                        canToast: true
+                    })
+                }, 1000)
+            }
+            
+        }
+        console.log(x)
+        this.setData({
+            slideX: x + "px"
+        })
+    },
+
+    slideEnd(e) {
+        this.setData({
+            slideX: 0
+        })
+    },
 
   testtap(e) {
       console.log(e)
@@ -58,7 +139,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+      
   },
 
   /**

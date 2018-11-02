@@ -3,7 +3,7 @@
         <swiper indicator-dots='true' indicator-color='#ccc' indicator-active-color='red'>
             <navigator url='/pages/find/article/article?url={{item}}' wx:for="{{imgUrls}}" wx:key="{{index}}">
                 <swiper-item>
-                    <image src='{{item}}'></image>
+                    <image class='swiperImg' src='{{item}}'></image>
                 </swiper-item>
             </navigator>
         </swiper>
@@ -22,9 +22,9 @@
             <navigator class='menjin-nav'>更多》</navigator>
         </view>
         <view class='menjin-items'>
-            <view class="menjin-item" wx:for="{{menjinList}}" wx:key="{{index}}">
+            <view class="menjin-item" wx:for="{{menjinList}}" wx:key="{{index}}" wx:for-item="itemname" data-menjin="{{itemname}}" bindtap='showMask'>
                 <image class='menjin-img' src='../../assets/icons/lockItem.png'></image>
-                <text class='menjin-text'>{{item}}</text>
+                <text class='menjin-text'>{{itemname}}</text>
             </view>
         </view>
     </view>
@@ -56,4 +56,28 @@
             </navigator>
         </view>
     </view>
+
+    <view class='mask' hidden='{{!maskShow}}'>
+        <view class='shadow'></view>
+        <view class='maskBox'>
+            <view class='title'>
+                <view>此操作可远程操作 {{menjinName}}</view>
+                <view>请谨慎操作</view>
+            </view>
+            <view class='item'>
+                门口视频
+            </view>
+            <view class='item'>
+                密码开锁
+            </view>
+            <view class='slide-wrap'>
+                <view class='slide' bindtouchstart='slideStart' bindtouchmove='slideMove' bindtouchend='slideEnd' style='left: {{slideX}}'></view>
+                右滑开锁
+            </view>
+            <view class='btn'>
+                <button type='warn' bindtap='maskBack'>返回</button>
+            </view>
+        </view>
+    </view>
+
 </view>
