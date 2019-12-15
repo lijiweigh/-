@@ -1,1 +1,18 @@
-<view>topArtists</view>
+<view class="topArtists">
+    <swiper class='swiper' previous-margin='60rpx' next-margin='60rpx' bindchange="handleChange">
+        <block wx:for="{{ singerList }}" wx:key="{{ index }}">
+            <swiper-item class="swiper_item">
+                <view class='inner_move_item'>
+                    <image class='cover' src='{{ item.img1v1Url }}'></image>
+                    <view class='cur_pos'>
+                        NO.{{ index + 1 }}
+                    </view>
+                    <view class='name'>
+                        {{ item.name }}
+                    </view>
+                    <view class='play_icon iconfont icon-bofang'></view>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

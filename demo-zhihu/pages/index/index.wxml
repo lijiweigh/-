@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="index-container">
+    <scroll-view scroll-y="true" class="scroll-view" bindscrolltoupper="toUpper" bindscrolltolower="toBottom" bindscroll="scrolling">
+        <view class="scroll-item" wx:for="{{[1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10]}}" >{{item}}</view>
+    </scroll-view>
+</view>
+ 

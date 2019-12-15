@@ -1,29 +1,42 @@
 <!--pages/searchResult/searchResult.wxml-->
 <view>
-    <view class='searchTop'>
-        <view class='inputWrap'>
-            <view class='iconfont icon-sousuo'></view>
-            <form>
-                <input class='searchInput' placeholder='输入你想要搜索的内容' placeholder-class='searchPlaceholder'
-                bindinput='handleInput' value='{{ searchValue }}'></input>
-                <view class='iconfont icon-shanchu clearBtn' hidden='{{ !isShowClearIcon }}' bindtap='handleClear'></view>
-            </form>
+    <view class='fixedTop'>
+        <view class='searchTop'>
+            <view class='inputWrap'>
+                <view class='iconfont icon-sousuo'></view>
+                <form>
+                    <input class='searchInput' placeholder='输入你想要搜索的内容' placeholder-class='searchPlaceholder'
+                    bindinput='handleInput' value='{{ searchValue }}'></input>
+                    <view class='iconfont icon-shanchu clearBtn' hidden='{{ !isShowClearIcon }}' bindtap='handleClear'></view>
+                </form>
+            </view>
+            <view class='cancelBtn' bindtap='handleCancel' wx:if="{{ !searchValue }}">取消</view>
+            <view class='cancelBtn' bindtap='handleSearch' wx:else>搜索</view>
         </view>
-        <view class='cancelBtn' bindtap='handleCancel' wx:if="{{ !searchValue }}">取消</view>
-        <view class='cancelBtn' bindtap='handleSearch' wx:else>搜索</view>
+
+        <view class='searchNav' wx:if="{{ !isShowHotSearch }}">
+            <view class="navItem {{curNav === index ? 'active' : ''}}" wx:for="{{navList}}" wx:key="{{index}}" bindtap='handleNav'
+            data-searchtype="{{item.searchType}}" data-index="{{index}}" >{{item.name}}</view>
+        </view>
     </view>
 
-    <view class='hotSearch'>
+    <view class='hotSearch' wx:if="{{ isShowHotSearch }}">
         <view class='title'>
             热门搜索
         </view>
 
         <view class='hotItem'>
-            <view class='item'>从无到有</view>
-            <view class='item'>从无有</view>
-            <view class='item'>从无到有到有</view>
-            <view class='item'>从到有到有</view>
-            <view class='item'>从无到有</view>
+            <view class='item' wx:for="{{ hotSearch }}" wx:key="{{ index }}" data-value="{{ item.first }}" 
+            bindtap='handleSearchHot' >{{ item.first }}</view>
+            
+        </view>
+    </view>
+
+    <view class='searchResult' wx:if="{{ !isShowHotSearch }}">
+        <resultItem bindsearchItemTap="handleSearchItemTap" wx:for="{{ searchResult[curNav] }}" wx:key="{{index}}" dataObj="{{ item }}" searchtype="{{navList[curNav].searchType}}"></resultItem>
+
+        <view class='noMore' wx:if="{{ isShowNoMore }}">
+            没有更多了！
         </view>
     </view>
 </view>

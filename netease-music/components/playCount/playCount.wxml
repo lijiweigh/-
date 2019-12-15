@@ -1,0 +1,8 @@
+<!--components/playCount/playCount.wxml-->
+<wxs src="../../wxs/filter.wxs" module="filter" />
+<view class='playCount_wrap'>
+    <view class='iconfont icon-ttpod playCount_icon'></view>
+    <view class='playCount'>
+        {{playCount}}
+    </view>
+</view>

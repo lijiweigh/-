@@ -1,3 +1,3 @@
 <view>
-    highQualityMusicList
+    <highQualityMusicItem wx:for="{{ musicList }}" wx:key="{{ index }}" musicItem="{{ item }}" binditemTap="handleItemTap"></highQualityMusicItem>
 </view>

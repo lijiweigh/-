@@ -1,0 +1,33 @@
+<!--pages/songSheetList/songSheetList.wxml-->
+<wxs src="../../wxs/filter.wxs" module="filter" />
+<import src="../template/template.wxml" />
+
+<view class='songSheetList'>
+    <view class='songSheetList-top' >
+        <view class='blur' style='background-image:url({{ coverImgUrl }})'></view>
+        <view class='songSheetList-top-img' >
+            <image class='top-img-img' src='{{ coverImgUrl }}'></image>
+            <!-- <play-count playCount="{{ songCount }}"  /> -->
+            <template is="playCount" data="{{ songCount }}" />
+        </view>
+        <view class='songSheetList-desc'>
+            <view class='title'>{{ listName }}</view>
+            <view class='author'>
+                <image class='avatar' src='{{ avatarUrl }}'></image>
+                <text class='name'>{{ nickName }}</text>
+            </view>
+        </view>
+    </view>
+
+    <view class='song-list'>
+        <view class='list-title'>
+            总共{{ songList.length }}首
+        </view>
+
+        <view class='lists'>
+            <block wx:for="{{ songList }}" wx:key="{{index}}">
+                <song-sheet-item songDetail="{{ item }}" index="{{ index + 1 }}" bindsongItemTap="handleSongItemTap" data-id="{{ item.id }}"></song-sheet-item>
+            </block>
+        </view>
+    </view>
+</view>

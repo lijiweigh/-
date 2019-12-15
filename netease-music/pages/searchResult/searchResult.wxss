@@ -1,6 +1,18 @@
 /* pages/searchResult/searchResult.wxss */
 @import '../../iconfont.wxss';
 
+page {
+    padding-top: 165rpx;
+}
+
+.fixedTop {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
 .searchTop {
     
     background: #EA584F;
@@ -55,8 +67,40 @@
     text-align: center;
 }
 
+.searchNav {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 30rpx;
+    line-height: 1.5;
+    background: #EA584F;
+    padding: 20rpx 0;
+}
+
+.navItem {
+    flex: 1;
+    margin: 0 50rpx;
+    text-align: center;
+}
+
+.navItem.active {
+    position: relative;
+    /* border-bottom: 10rpx solid #fff; */
+}
+
+.navItem.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10rpx;
+    width: 100%;
+    height: 10rpx;
+    background: #fff;
+    border-radius: 5rpx;
+}
+
 .hotSearch {
-    margin-top: 100rpx;
+    /* margin-top: 100rpx; */
 
 }
 
@@ -79,3 +123,5 @@
     border: 1px solid #eee;
     margin: 30rpx 0 0 50rpx;
 }
+
+

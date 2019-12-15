@@ -1,3 +1,5 @@
+@import '../../iconfont.wxss';
+
 .playingGif {
     display: inline-block;
     background-color: #EA584F;
@@ -29,6 +31,48 @@
 
 .playingGif .g4 {
      animation-delay: -.6s;
+}
+
+
+.playCount_icon {
+    margin-right: 10rpx;
+}
+
+.playCount_wrap {
+    position: absolute;
+    right: 10rpx;
+    top: 10rpx;
+    font-size: 0;
+}
+
+.playCount,
+.playCount_icon {
+    display: inline-block;
+    color: #fff;
+    font-size: 20rpx;
+}
+
+.videoPlayCount_wrap {
+    position: absolute;
+    left: 20rpx;
+    top: 15rpx;
+    font-size: 0;
+    text-shadow: 1px 1px 4px #000;
+}
+
+.videoPlayCount_icon,
+.videoPlayCount {
+    display: inline-block;
+    color: #fff;
+    font-size: 24rpx;
+}
+
+.videoPlayCount {
+   
+}
+
+.videoPlayCount_icon {
+     margin-right: 10rpx;
 }
 
 @keyframes playingAnimation {

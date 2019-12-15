@@ -4,7 +4,9 @@
         "pages/highQualityMusicList/highQualityMusicList",
         "pages/recommendMV/recommendMV",
         "pages/topArtists/topArtists",
-        "pages/searchResult/searchResult"
+        "pages/searchResult/searchResult",
+        "pages/songSheetList/songSheetList",
+        "pages/playSong/playSong"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -26,7 +28,7 @@
             },
             {
                 "pagePath": "pages/highQualityMusicList/highQualityMusicList",
-                "text": "歌单",
+                "text": "精品",
                 "iconPath": "images/my.png",
                 "selectedIconPath": "images/my_active.png"
             },

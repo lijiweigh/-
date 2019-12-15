@@ -1,0 +1,71 @@
+/* pages/songSheetList/songSheetList.wxss */
+@import "../template/template.wxss";
+
+.songSheetList-top {
+    padding: 0 50rpx;
+    height: 360rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    /* filter: blur(10px); */
+}
+
+.blur {
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    left: -10%;
+    top: -10%;
+}
+
+.songSheetList-top-img {
+    position: relative;
+}
+
+.top-img-img {
+    width: 280rpx;
+    height: 280rpx;
+    border-radius: 20rpx;
+}
+
+.songSheetList-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 30rpx;
+    position: relative;
+}
+
+.songSheetList-desc .title{
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #fff;
+}
+
+.songSheetList-desc .author {
+    font-size: 30rpx;
+    color: #Fff;
+    display: flex;
+    align-items: center;
+    margin-top: 80rpx;
+}
+
+.songSheetList-desc .avatar {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+
+.list-title {
+    /* height: 60rpx; */
+    padding: 20rpx;
+    font-size: 28rpx;
+    border-bottom: 1rpx solid #eee;
+}
