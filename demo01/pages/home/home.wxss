@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 .swiperImg {
+=======
+.swiper image{
+>>>>>>> 1e1c822b3571fe352220a867c27de6210afa4b5e
     width: 100%;
 }
 

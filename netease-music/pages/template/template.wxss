@@ -1,0 +1,46 @@
+.playingGif {
+    display: inline-block;
+    background-color: #EA584F;
+    height: 40rpx;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.playingGif .gifItem {
+    display: inline-block;
+     width: 6rpx;
+     height: 40rpx;
+     margin-right: 6rpx;
+     background-color: #fff;
+}
+
+.playing .gifItem {
+    animation: playingAnimation 0.9s linear infinite;
+}
+
+.playingGif .g1,
+.playingGif .g3 {
+    transform: translateY(10rpx)
+}
+
+.playingGif .g2 {
+    animation-delay: -.3s;
+}
+
+.playingGif .g4 {
+     animation-delay: -.6s;
+}
+
+@keyframes playingAnimation {
+    0% {
+        transform: translateY(0rpx);
+    }
+
+    50% {
+        transform: translateY(20rpx);
+    }
+
+    100% {
+        transform: translateY(0rpx);
+    }
+}

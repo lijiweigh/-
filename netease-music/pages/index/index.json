@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "推荐音乐",
+    "usingComponents": {
+        "recommendMusicList": "/components/recommendMusicList/recommendMusicList"
+    }
+}

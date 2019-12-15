@@ -1,0 +1,81 @@
+/* pages/searchResult/searchResult.wxss */
+@import '../../iconfont.wxss';
+
+.searchTop {
+    
+    background: #EA584F;
+    height: 80rpx;
+    font-size: 26rpx;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.inputWrap {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 50rpx 0 50rpx;
+    width: 600rpx;
+    height: 60rpx;
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 30rpx;
+    margin: 0 30rpx;
+}
+
+.searchInput {
+    height: 60rpx;
+    line-height: 60rpx;
+    width: 100%;
+    color: #fff;
+    overflow: hidden;
+}
+
+.searchPlaceholder {
+    font-size: 26rpx;
+    color: #fff;
+}
+
+.icon-sousuo {
+    position: absolute;
+    left: 16rpx;
+    top: 16rpx;
+    color: #fff;
+}
+
+.clearBtn {
+    position: absolute;
+    right: 16rpx;
+    top: 16rpx;
+}
+
+.cancelBtn {
+    width: 60rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+}
+
+.hotSearch {
+    margin-top: 100rpx;
+
+}
+
+.hotSearch .title {
+    font-size: 30rpx;
+    padding-left: 30rpx;
+}
+
+.hotItem {
+
+}
+
+.hotItem .item{
+    display: inline-block;
+    padding: 10rpx 20rpx;
+    font-size: 26rpx;
+    border-radius: 18rpx;
+    color: #666;
+    line-height: 1;
+    border: 1px solid #eee;
+    margin: 30rpx 0 0 50rpx;
+}

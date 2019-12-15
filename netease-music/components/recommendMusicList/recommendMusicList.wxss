@@ -1,0 +1,41 @@
+@import '../../iconfont.wxss';
+
+.recommendMusicList {
+    position: relative;
+    width: 238rpx;
+    margin-left: 9rpx;
+    margin-top: 20rpx;
+    display: inline-block;
+}
+
+.img {
+    width: 238rpx;
+    height: 238rpx;
+    border-radius: 4rpx;
+}
+
+.playCount_icon {
+    margin-right: 10rpx;
+}
+
+.icon {
+    position: absolute;
+    right: 10rpx;
+    top: 10rpx;
+    font-size: 0;
+}
+
+.playCount,
+.playCount_icon {
+    display: inline-block;
+    color: #fff;
+    font-size: 20rpx;
+}
+
+.title {
+    font-size: 24rpx;
+    line-height: 1.5;
+    padding: 0 5rpx;
+    height: 75rpx;
+    overflow: hidden;
+}
