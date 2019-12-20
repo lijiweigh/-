@@ -1,8 +1,35 @@
-.scroll-view {
-    height: 667px;
-    width: 100%;
+.index-wraper {
+    background-color: #F0F4F3;
 }
-
-.scroll-item {
-    height: 200rpx;
+.header {
+    background-color: #2A8CE5;
+    height: 80rpx;
+    box-sizing: border-box;
+    padding: 0 10rpx;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-input {
+    position: relative;
+    width: 80%;
+    height: 100%;
+}
+.search-btn,
+.search-img {
+    width: 64rpx;
+    height: 64rpx;
+}
+.search-img {
+    position: absolute;
+    left: 0;
+    top: 8rpx;
+}
+.search-input {
+    width: 100%;
+    height: 60rpx;
+    margin-top: 10rpx;
+    background-color: rgba(255, 255, 255, .2);
+    padding-left: 70rpx;
 }

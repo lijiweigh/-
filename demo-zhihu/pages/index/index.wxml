@@ -1,7 +1,14 @@
-<!--index.wxml-->
-<view class="index-container">
-    <scroll-view scroll-y="true" class="scroll-view" bindscrolltoupper="toUpper" bindscrolltolower="toBottom" bindscroll="scrolling">
-        <view class="scroll-item" wx:for="{{[1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10]}}" >{{item}}</view>
-    </scroll-view>
+<view class="index-wraper">
+    <view class="header">
+        <view class="left-input">
+            <image class="search-img" src="../../images/search.png"></image>
+            <input class="search-input" bindinput="searchValueChange"></input>
+        </view>
+        <view class="right-search" bindtap="handleSearch">
+            <image class="search-btn" src="../../images/lighting.png"></image>
+        </view>
+    </view>
+    <view class="list-items">
+        <list-item wx:for="{{listData}}" wx:key="{{index}}" itemData="{{item}}"></list-item>
+    </view>
 </view>
- 

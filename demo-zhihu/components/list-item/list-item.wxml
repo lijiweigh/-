@@ -1,0 +1,22 @@
+<view class="list-item" hover-class="none" hover-stop-propagation="false">
+    <view class="header" hover-class="none" hover-stop-propagation="false">
+        <view class="header-left" hover-class="none" hover-stop-propagation="false">
+            <image class="avatar" src="{{itemData.feed_source_img}}" />
+            <text class="avatar-text">{{itemData.feed_source_name + itemData.feed_source_txt}}</text>
+        </view>
+        <view class="header-right" hover-class="none" hover-stop-propagation="false">
+            <image class="menu-icon" src="../../images/more.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+        </view>
+    </view>
+    <view class="title" bindtap="tapQuestion" data-questionid="{{itemData.question_id}}">{{itemData.question}}</view>
+    <view class="content" bindtap="tapContent" data-questionid="{{itemData.question_id}}">{{itemData.answer_ctnt}}</view>
+    <view class="bottom">
+        <text class="bottom-text">{{itemData.good_num}}</text>
+        <text class="bottom-text">赞同</text>
+        <text class="bottom-text">·</text>
+        <text class="bottom-text">{{itemData.comment_num}}</text>
+        <text class="bottom-text">评论</text>
+        <text class="bottom-text">·</text>
+        <text class="bottom-text">关注问题</text>
+    </view>
+</view>
