@@ -15,7 +15,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.9.4",
 	"appid": "wx5d26cdddf4d806fb",
-	"projectname": "demo-mall",
+	"projectname": "quiet-weather",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
